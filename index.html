@@ -9,38 +9,79 @@
 <body class="bg-primary-subtle mt-4">
     <!-- header-->
      <header>
-        <h3 class="text-center"> CALCOLA IL PREZZO DEL TUO BIGLIETTO</h3>
+        <h3 class="text-center fst-italic"> CALCOLA IL PREZZO DEL TUO BIGLIETTO</h3>
     </header>
 
     <main>
         <!-- card input-->
-        <div class="container card bg-white m-4 mx-auto p-5 shadow">
-            <h4 class="text-primary text-center">TICKET CHECK</h4>
-                <form>
-                        <!-- input nome e cognome-->  
-                    <label>Nome e cognome</label>          
-                        <input type="text" aria-label="Nome e Cognome" class="form-control"
-                        placeholder="Inserisci Nome e Cognome">
-                        
-                        <!-- input chilometri da percorrere-->
-                    <label class="mt-3" for="passengerKm">Chilometri</label>
-                        <input type="number" class="form-control" id="passengerKm" 
-                        placeholder="Inserisci chilometri da percorrere">
+        <div class="container bg-light m-4 mx-auto p-5 shadow-lg">
+            <!--card header-->
+            <div class="card-header">
+                <h4 class="text-center fw-bold">Ticket Check</h4>
+                <hr>
+            </div>
+            <!--card body-->
+            <div class="card-body">
+                    <form>
+                            <!-- input nome e cognome-->  
+                        <label class="fw-bold">Nome e cognome</label>          
+                            <input type="text" aria-label="Nome e Cognome" class="form-control"
+                            placeholder="Inserisci Nome e Cognome" required>
+                            
+                            <!-- input chilometri da percorrere-->
+                        <label class="mt-3 fw-bold" for="passengerKm">Chilometri</label>
+                            <input type="number" class="form-control" id="passengerKm" 
+                            placeholder="Inserisci chilometri da percorrere" required>
 
-                        <!--select età-->
-                    <label class="mt-3" for="passengerAge">Età</label>
-                        <select class="form-select" aria-label="seleziona età" id="passengerAge">
-                        <option selected>Seleziona la tua età</option>
-                        <option value="1">Minorenne</option>
-                        <option value="2">Maggiorenne</option>
-                        <option value="3">Over 65</option>
-                        </select>
+                            <!--select età-->
+                        <label class="mt-3 fw-bold" for="passengerAge">Età</label>
+                            <select class="form-select" aria-label="seleziona età" id="passengerAge" required>
+                            <option selected>Seleziona la tua età</option>
+                            <option value="1">Minorenne</option>
+                            <option value="2">Maggiorenne</option>
+                            <option value="3">Over 65</option>
+                            </select>
+                            
+                        <!--button-->
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="mt-4 rounded-3 bg-white fw-bold">Calcola biglietto</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+
+        <h3 class="text-center fst-italic">IL TUO BIGLIETTO</h3>
+            
+        <!--card biglietto-->
+        <div class="container card bg-light m-4 mx-auto p-5 shadow-lg">
+            <!--card header-->
+            <div class="card-header">
+                <h4>Dettagli Passeggero</h4>
+            </div>
+            <!--card body-->
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th class="text-start">Nome Passeggero</th>
+                        <th>Offerta</th>
+                        <th>Carrozza</th>
+                        <th>Codice CP</th>
+                        <th>Costo biglietto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td id="ticket-name" class="fw-bold bg-secondary-subtle text-start">Mario Rossi</td>
+                        <td id="ticket-offer">Biglietto Standard</td>
+                        <td id="ticket-coach">5</td>
+                        <td id="ticket-code">90210</td>
+                        <td id="ticket-price">2.10€</td>
+                        </tr>
                         
-                    <!--button-->
-                    <div class="d-flex justify-content-center">
-                        <button type="submit" class="mt-4 rounded-3">Calcola biglietto</button>
-                    </div>
-                </form>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </main>
 
