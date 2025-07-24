@@ -9,7 +9,9 @@ const kmInput= document.getElementById ('passengerKm')
 const buttonEl = document.querySelector ('button')
 const stampaOutput = document.getElementById ('output')
 
-buttonEl.addEventListener ('click', function () {
+buttonEl.addEventListener ('click', function (event) {
+
+    event.preventDefault ()
 
     //al click prendi questi valori
 
@@ -23,13 +25,13 @@ buttonEl.addEventListener ('click', function () {
 
     //calcolo sconto
 
-if (età < 18) {
+if (età === 1) {
     sconto = biglietto * 0.20
     biglietto = biglietto - sconto
     console.log(biglietto.toFixed (2));
     
     
-} else if (età >= 65) {
+} else if (età === 3) {
     sconto = biglietto * 0.40
     biglietto = biglietto - sconto
     console.log(biglietto.toFixed (2));
